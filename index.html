@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HAPPY BIRTHDAY!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Page 1: Login -->
+  <div id="loginPage" class="page active">
+    <h2>🎂 Welcome to your Birthday Surprise! 🎂</h2>
+    <p>Enter the magic word 👇🏾 (Hint: your nickname)</p>
+    <input type="password" id="passwordInput" placeholder="e.g. froboy" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <!-- Page 2: Tap Me -->
+  <div id="tapPage" class="page hidden">
+    <div id="tapCard" class="tap-card">🎉 Tap Me 🎉</div>
+  </div>
+
+  <!-- Page 3: Letter -->
+  <div id="letterPage" class="page hidden">
+    <div class="confetti-wrapper"></div>
+
+    <!-- Big Centered Birthday Message -->
+    <div id="bigPopup" class="big-popup hidden">
+      <div class="big-popup-message">🎉 Happy Birthday, my Love! 🎉</div>
+    </div>
+
+    <!-- The letter content -->
+    <div id="loveLetter" class="love-letter hidden">
+      <p>
+        You're much older now... but don’t worry, you’re still the cutest guy with a fro 😆💖<br/><br/>
+        I am the luckiest girl to have such a patient, sweet, handsome, loving, caring (I could go all day long) boyfriend.<br/><br/>
+        Because we aren't together on this special day, I wanted to make a little cute and unique site to show you how much I love and appreciate you.<br/><br/>
+        You have brought so much joy into my life, in the gentlest, most genuine way. Even in the smallest moments, your presence feels like home. I hope this reminds you of how deeply loved, appreciated, and admired you are. Not just today, but everyday.<br/><br/>
+        I miss you so much it hurts. I can't wait to see you again!  
+      </p>
+      <button onclick="goToNext()">Next ➡️</button>
+    </div>
+  </div>
+    
+ <div class="slideshow-container" style="display:none;">
+  <!-- Image 1 -->
+  <div class="slide fade">
+    <img src="images/us%20cozy.jpg" alt="Memory 1">
+    <p class="caption">The day that made my heart smile 💕</p>
+  </div>
+        
+   <!-- Image 2 -->     
+    <div class="slide fade">
+    <img src="images/selfie%20together.jpg" alt="Memory 2">
+    <p class="caption">Hanging with you even when we're doing nothing feels so good 💕</p>
+  </div>
+    
+    <div class="slide fade">
+    <img src="images/us%20in%20love.jpg" alt="Memory 2">
+    <p class="caption">I love you soo much 💕</p>
+  </div>
+
+  <!-- Video 1 -->
+  <div class="slide fade">
+    <video controls>
+      <source src="videos/video%20call.mp4" type="video/mp4">
+    </video>
+    <p class="caption">Just to show you how crazy are!😆 I love it!</p>
+  </div>
+
+  <!-- Image 3 -->
+  <div class="slide fade">
+    <img src="images/exposureee.jpg" alt="Memory 2">
+    <p class="caption">Exposureee 🥹</p>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="slide fade">
+    <video controls>
+      <source src="videos/video%20us%20together.mp4" type="video/mp4">
+    </video>
+    <p class="caption">I miss this so much! 🥰</p>
+  </div>
+
+  <!-- Final video -->
+  <div class="slide fade final-video">
+    <video id="finalVideo" controls>
+      <source src="videos/video%20of%20my%20man.mp4" type="video/mp4">
+    </video>
+    <p class="caption">My man my man my man❤️</p>
+  </div>
+    
+  <div class="slideshow-controls" style="margin-top: 20px;">
+    <button id="prevBtn">⬅️ Previous</button>
+    <button id="nextBtn">Next ➡️</button>
+  </div>
+    
+    <div id="finalButtons" style="display: none;" class="final-buttons">
+  <button onclick="replaySlideshow()">🔁 Replay Slideshow</button>
+  <button onclick="showFinalMessage()">💌 Final Love Letter</button>
+    </div>
+</div>
+
+<!-- Final Message -->
+<div id="finalMessage" style="display: none;" class="final-message">
+  <h2>To the one who makes my heart beat softer and my smile stretch wider...</h2>
+  <p>
+    Having you in my life is just so amazing! I cannot believe we almost lost each other, but we found our way back to each other. I love each and every moment I spend with you, and I hope we get to continue this journey for the rest of our lives. I love and appreciate you. Always have, always will. Happy birthday, my baby 💖.
+  </p>
+</div>
+
+<!-- Background music -->
+<audio id="bgMusic" src="audio/Everything-Kehlani.mp3" autoplay loop></audio>
+
+<!-- Floating Hearts -->
+<div class="hearts-container"></div>
+    
+   
+        <script src="script.js"></script>
+    
+</body>
+</html>
